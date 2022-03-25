@@ -1,2 +1,9 @@
-# GDPS-bot
-un bot de discord que crea servidroes de GD O Geometry dash GDPS
+module.exports = {
+	name: 'wlc',
+	description: 'emit welcome',
+	devs: true,
+	run: async (client, message) => {
+		client.emit('guildMemberAdd', message.member);
+		message.channel.send('Done ...');
+	},
+};
